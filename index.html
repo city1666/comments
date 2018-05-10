@@ -13,25 +13,22 @@
 <script>
   window.$docsify = {
   
-    auto2top: true,
-    executeScript: true,
+    	auto2top: true,
+    	executeScript: true,
+	loadSidebar: 'newsidebar.md',
+
   
   
-    search: {
-      paths: 'auto',
-      placeholder: 'Type to search 🔍',
-      noData: 'No Results!',
-    }
-  };
+	search: {
+	      	paths: 'auto',
+	      	placeholder: 'Type to search 🔍',
+	      	noData: 'No Results!',
+		}
+	};
 </script>
 
  
- {% for file in site.static_files %}
-    {% if file.extname == ".md" and file.name != "ISSUE_TEMPLATE.md"%}
-*  [{{ file.name }}](#{{ file.path }})
-	
-    {% endif %}
-{% endfor %}
+
  
  
 </body>
