@@ -11,6 +11,14 @@
 <body>
   <div id="app">正在加载......</div>
 
+ {% for file in site.static_files %}
+    {% if file.extname == ".md" and file.name != "ISSUE_TEMPLATE.md"%}
+*  [{{ file.name }}](#{{ file.path }})
+	
+    {% endif %}
+{% endfor %}
+ 
+ 
 </body>
 
 <script>
